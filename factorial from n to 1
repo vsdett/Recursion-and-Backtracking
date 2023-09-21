@@ -1,0 +1,23 @@
+import java.util.*;
+public class Main
+{
+    public static int factorial(int n)
+    {
+        if(n==1)
+         {
+         //this is the base condition
+        return 1;
+         }
+        int fact_nm1=factorial(n-1);  
+        int fact_n=fact_nm1*n;
+        return fact_n;
+        
+    }
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    System.out.println("Enter the number");
+	    int n=sc.nextInt();
+		int output=factorial(n);
+		System.out.println(output);
+	}
+}
