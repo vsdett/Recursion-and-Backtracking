@@ -1,0 +1,21 @@
+import java.util.*;
+public class Main
+{
+    public static void sum(int n,int i,int add)
+    {
+        if(n==i)
+         {
+         add=add+i;
+        System.out.println(add); //this is the base condition
+        return;
+         }
+        add=add+i;  // we cannot write in 1 line-> add=add+sum(n-1,add);
+        sum(n,i+1,add);
+    }
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    System.out.println("Enter the number");
+	    int n=sc.nextInt();
+		sum(n,1,0);
+	}
+}
