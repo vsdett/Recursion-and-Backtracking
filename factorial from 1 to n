@@ -1,0 +1,21 @@
+import java.util.*;
+public class Main
+{
+    public static void fact(int n,int i,int factt)
+    {
+        if(n==i)
+         {
+         factt=factt*i;
+        System.out.println(factt); //this is the base condition
+        return;
+         }
+        factt=factt*i;  
+        fact(n,i+1,factt);
+    }
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    System.out.println("Enter the number");
+	    int n=sc.nextInt();
+		fact(n,1,1);
+	}
+}
