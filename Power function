@@ -1,0 +1,23 @@
+import java.util.*;
+class Main 
+{
+    static int cal=1;
+    public static void powerfunc(int x,int n)
+    {
+        if (n==0)
+        {
+            System.out.println(cal);
+            return;
+        }
+        cal=cal*x;
+        powerfunc(x,n-1);
+    }
+    public static void main(String args[])
+    {
+        Scanner sc =new Scanner(System.in);
+        int x=sc.nextInt();
+        int n=sc.nextInt();
+        
+        powerfunc(x,n);
+    }
+}
