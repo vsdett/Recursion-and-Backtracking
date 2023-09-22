@@ -1,0 +1,29 @@
+import java.util.*;
+class Main 
+{
+    static int first=-1,last=-1;
+    public static void  occur(String str, char x,int i)
+    {
+        if (i==str.length())
+         {
+             System.out.println("first="+first+" last="+last);
+             return;
+         }
+        if(x==str.charAt(i))
+        {
+            if (first==-1)
+             last=first=i;
+            if(i>=last)  // OR if(last>=first)
+             last=i;
+        }
+        occur(str,x,i+1);
+        
+    }
+    public static void main(String args[])
+    {
+        Scanner sc =new Scanner(System.in);
+        String str;
+        occur("Hello",'l',0);
+        
+    }
+}
