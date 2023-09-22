@@ -1,0 +1,23 @@
+import java.util.*;
+class Main 
+{
+    public static int  powerfunc(int x,int n)
+    {
+        if (n==0)
+        {
+            
+            return 1;
+        }
+        int Pow_nm1= powerfunc(x,n-1);
+        int res=x*Pow_nm1;
+        return res;
+    }
+    public static void main(String args[])
+    {
+        Scanner sc =new Scanner(System.in);
+        int x=sc.nextInt();
+        int n=sc.nextInt();
+        System.out.println(powerfunc(x,n));
+        
+    }
+}
