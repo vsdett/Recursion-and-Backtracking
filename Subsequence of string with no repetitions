@@ -1,0 +1,29 @@
+import java.util.HashSet;
+public class Main
+{
+    
+    public static void subsequences(String str,int i,String newstr,HashSet<String> set)  
+    {
+        if(i==str.length())
+        {
+            if(set.contains(newstr))
+             {return;}
+            else{
+                System.out.println(newstr);
+                set.add(newstr);
+               return;
+            }
+        }
+      char currchar=str.charAt(i);
+      subsequences(str,i+1,newstr+currchar,set);
+      
+      subsequences(str,i+1,newstr,set);
+    }
+    
+	public static void main(String[] args) {
+	    HashSet<String> set=new HashSet<>();
+	    subsequences("abc",0,"",set);
+	    System.out.println();
+	    subsequences("aaa",0,"",set);
+	}
+}
