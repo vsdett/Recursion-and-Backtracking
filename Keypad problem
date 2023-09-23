@@ -1,0 +1,23 @@
+import java.util.Arrays;
+public class Main
+{
+     static String mapping[]={".","abc","def","ghi","jkl","mno","pqrs","tu","vwx","yz"}; //imp step
+    
+    public static void keypad(String str,int i,String newstr)
+    {
+        if(i==str.length())
+        {
+            System.out.print(newstr+" - ");
+            return;
+        }
+     char currchar=str.charAt(i);
+     String len=mapping[currchar-'0'];  //important step
+     for (int j=0;j<len.length();j++)   //d,e,f
+     {
+         keypad(str,i+1,newstr+len.charAt(j));  //g,h,i
+     }
+    }
+	public static void main(String[] args) {
+	keypad("23",0,"");
+	}
+}
