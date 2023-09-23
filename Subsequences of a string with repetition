@@ -1,0 +1,22 @@
+public class Main
+{
+    
+    public static void subsequences(String str,int i,String newstr)  //boolean recursion
+    {
+        if(i==str.length())
+        {
+            System.out.print(newstr+" - ");
+            return;
+        }
+      char currchar=str.charAt(i);
+      subsequences(str,i+1,newstr+currchar);
+      
+      subsequences(str,i+1,newstr);
+    }
+    
+	public static void main(String[] args) {
+	    subsequences("abc",0,"");
+	    System.out.println();
+	    subsequences("aaa",0,"");
+	}
+}
