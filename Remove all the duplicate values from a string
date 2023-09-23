@@ -1,0 +1,30 @@
+public class Main
+{
+    static int mapping[]=new int[26]; //important statement
+    
+    // OR we can use Arrys.fill(mapping,value);
+    //static boolean mapping=new boolean[26]; for all 26 "false" vales by default
+    
+    public static void duplicate(String str,int i)  //boolean recursion
+    {
+        if(i==str.length())
+        {
+            return; //base condition
+        }
+       char currchar=str.charAt(i);
+       int map=currchar-'a';  //important statement
+       if(mapping[map]==0)
+       {
+           System.out.print(currchar);
+           mapping[map]=1;
+           duplicate(str,i+1);
+           
+       }
+       else
+       duplicate(str,i+1);
+    }
+    
+	public static void main(String[] args) {
+	    duplicate("aabbccadabeefeg",0);
+	}
+}
