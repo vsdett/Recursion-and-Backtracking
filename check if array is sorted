@@ -2,7 +2,7 @@ public class Main
 {
     public static boolean sorted(int arr[],int i)  //boolean recursion
     {
-        if(i==arr.length-1)
+        if(i==arr.length-1)    //see this base condition carefuly
          {
              return true;
              //base condition
