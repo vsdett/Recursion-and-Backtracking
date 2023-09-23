@@ -1,7 +1,7 @@
 public class Main
 {
     
-    public static void subsequences(String str,int i,String newstr)  //boolean recursion
+    public static void subsequences(String str,int i,String newstr)  
     {
         if(i==str.length())
         {
