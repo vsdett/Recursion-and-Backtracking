@@ -1,0 +1,33 @@
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+
+public class Main
+{
+    public static boolean sorted(int arr[],int i)  //boolean recursion
+    {
+        if(i==arr.length-1)
+         {
+             return true;
+             //base condition
+         }
+        if (arr[i]>arr[i+1])
+        {
+            return false;
+        }
+        else 
+          return sorted(arr,i+1);  //here "return" is necessary as it returns the base 
+                                //condition ("true") to the main function as return type is mentioned is recursion
+    
+    }
+    
+	public static void main(String[] args) {
+	    int arr[]={1,2,3,4,1};
+	    System.out.println(sorted(arr,0));
+		
+	}
+}
